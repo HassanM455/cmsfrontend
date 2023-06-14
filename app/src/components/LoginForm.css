@@ -1,0 +1,61 @@
+.loginform {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	color: #3D3D3D;
+	gap: 25px;
+}
+
+
+
+.loginform__inputs {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	order: 3;
+	width: 60vw;
+	max-width: 500px;
+
+
+}
+
+.loginform__inputs input {
+	box-sizing: border-box;
+	border-radius: 8px;
+	align-items: flex-start;
+	align-self: stretch;
+	height: 30px;
+}
+
+.loginform__inputs button {
+	background: #4363DA;
+	border: 1px solid #4363DA;
+	opacity: 0.5;
+	border-radius: 8px;
+	height: 28px;
+	justify-content: center;
+
+	font-weight: 500;
+	font-size: 16px;
+	color: #FFFFFF;
+	align-items: center;
+	cursor: pointer;
+}
+
+
+input:placeholder-shown {
+	padding: 0px 5px ;
+	border: 1px solid #C4C4C4;
+}
+
+.forgot__password {
+	color: #3D3D3D;
+	background: none;
+	border: none;
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 17px;
+	cursor: pointer;
+}
