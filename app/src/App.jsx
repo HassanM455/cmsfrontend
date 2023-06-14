@@ -4,6 +4,10 @@ import LoginForm from './components/LoginForm';
 
 
 function App() {
+  const forgotPasswordHandler = (event) => {
+
+  }
+  
   return (
     <div className="app-login">
         <header 
@@ -18,6 +22,7 @@ function App() {
             top: '15rem' 
           }}>
         </LoginForm>
+      <button className="forgot__password" type="submit" onClick={forgotPasswordHandler}>Forgot Password</button>
     </div>
   );
 }

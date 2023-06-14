@@ -18,3 +18,16 @@
 	color: #4363DA;
 }
 
+
+.forgot__password {
+  position: absolute;
+ 	top: 35em; 
+	color: #3D3D3D;
+	background: none;
+	border: none;
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 17px;
+	cursor: pointer;
+}

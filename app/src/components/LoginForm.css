@@ -4,10 +4,15 @@
 	justify-content: space-between;
 	align-items: center;
 	color: #3D3D3D;
-	gap: 25px;
+	gap: 12px;
+	order: 3;
+	width: 60vw;
+	max-width: 500px;
 }
 
-
+.loginform header {
+	color: #3D3D3D;
+}
 
 .loginform__inputs {
 	display: flex;
@@ -16,11 +21,9 @@
 	order: 3;
 	width: 60vw;
 	max-width: 500px;
-
-
 }
 
-.loginform__inputs input {
+.loginform input {
 	box-sizing: border-box;
 	border-radius: 8px;
 	align-items: flex-start;
@@ -28,11 +31,18 @@
 	height: 30px;
 }
 
-.loginform__inputs button {
+input:placeholder-shown {
+	padding: 0px 5px ;
+	border: 1px solid #C4C4C4;
+}
+
+.loginform button {
 	background: #4363DA;
 	border: 1px solid #4363DA;
 	opacity: 0.5;
 	border-radius: 8px;
+	align-items: flex-start;
+	align-self: stretch;
 	height: 28px;
 	justify-content: center;
 
@@ -44,18 +54,7 @@
 }
 
 
-input:placeholder-shown {
-	padding: 0px 5px ;
-	border: 1px solid #C4C4C4;
+.loginform button:focus {
+	opacity: 1.0;
 }
 
-.forgot__password {
-	color: #3D3D3D;
-	background: none;
-	border: none;
-	font-family: 'Helvetica Neue';
-	font-style: normal;
-	font-weight: 400;
-	line-height: 17px;
-	cursor: pointer;
-}
