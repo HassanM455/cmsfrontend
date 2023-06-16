@@ -29,6 +29,7 @@ function LoginForm(props) {
 
 
 	return (
+	
 		<div className="loginForm" style={props.style}>
 			<Form>
 			<header className="form-header">
