@@ -6,8 +6,24 @@
 
 .app-login {
     position: relative;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
+}
+
+.app-login img {
+  height: 100vh;
+}
+
+/*media queries for responsive design*/
+
+@media screen and (max-width: 920px){
+
+  .app-login {
+    justify-content: center;
+  }
+  .app-login img{
+    display: none;
+  }
 }

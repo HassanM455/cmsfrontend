@@ -1,8 +1,10 @@
 
 .loginForm {
-    min-width: 300px;
-    width: 32vw;
+    padding: 2em;
     margin-top: -20vh;
+    width: 80vw;
+    min-width: 320px;
+
     .form-header {
         text-align: center;
         display: grid;
@@ -10,6 +12,7 @@
        h1 {
         color: var(--primary-600);
         font-weight: 700;
+        font-size: 3.2rem;
        }
        h2 {
         font-size: 1.6rem;
@@ -58,3 +61,17 @@
     }
 }
 
+// mobile queries
+
+@media screen and (min-width: 920px){
+    .loginForm {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .loginForm {
+        width: 100%;
+        padding: 10em;
+    }
+}
