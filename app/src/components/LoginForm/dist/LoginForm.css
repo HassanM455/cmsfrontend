@@ -1,6 +1,7 @@
 .loginForm {
   min-width: 300px;
   width: 32vw;
+  margin-top: -20vh;
 }
 .loginForm .form-header {
   text-align: center;
