@@ -1,4 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
+   /* 16px */
+   font-size: 1.6rem;
+  height: 100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -7,7 +17,70 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+    /* 62.5% of 16px browser font size is 10px */
+  font-size: 62.5%;
+  /* (62.5/100) * 16px = 10px */
+  -webkit-text-size-adjust: none;
+  /* for iOS Safari */
+  text-size-adjust: none;
+  /* for other mobile browsers */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+  list-style: none;
+}
+
+a {
+  /* Places underlines below the descenders */
+  text-underline-position: under;
+
+
+  /* Sets the thickness as a percentage of the font size */
+  text-decoration-thickness: 8;
+}
+
+menu,
+ol,
+ul {
+  padding-left: 0;
+}
+
+article ol,
+article ul {
+  list-style-position: inside;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* remove the outline for mouse users but keep it for keyboard users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* dds pointer cursors to interactive elements that don’t already have an alternative cursor, for example, text inputs, textareas, and more: */
+label,
+button,
+select,
+summary,
+[type=radio],
+[type=submit],
+[type=checkbox] {
+  cursor: pointer;
 }

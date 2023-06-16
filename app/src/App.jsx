@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import LoginForm from './components/LoginForm';
+import LoginForm from './components/LoginForm/LoginForm';
 
 
 function App() {
@@ -10,19 +10,8 @@ function App() {
   
   return (
     <div className="app-login">
-        <header 
-          className="app-login__welcome"
-          style={{
-            position: 'absolute', 
-            top: '10rem'              
-          }}>Welcome</header>
-        <LoginForm 
-          style={{ 
-            position: 'absolute', 
-            top: '15rem' 
-          }}>
+        <LoginForm>
         </LoginForm>
-      <button className="forgot__password" type="submit" onClick={forgotPasswordHandler}>Forgot Password</button>
     </div>
   );
 }
