@@ -4,9 +4,7 @@ import LoginForm from './components/LoginForm/LoginForm';
 
 
 function App() {
-  const forgotPasswordHandler = (event) => {
-
-  }
+ 
   
   return (
     <div className="app-login">

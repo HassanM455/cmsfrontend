@@ -4,6 +4,9 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import { Button } from 'react-bootstrap';
 import './LoginForm.css';
 
+
+const forgotPasswordHandler = (event) => {}
+
 function LoginForm(props) {
 
 	const [inputUsername, setInputUsername] = useState('');
@@ -72,7 +75,7 @@ function LoginForm(props) {
 						style={{ opacity: isButtonFocus ? '1.0' : '0.5' }}>
 						Login
 					</Button>
-					<Button variant="lightc" className="forgot-password mt-3" type="submit" >Forgot Password</Button>
+					<Button variant="lightc" className="forgot-password mt-3" type="submit"  onClick={forgotPasswordHandler}>Forgot Password</Button>
 					</footer>
 			</Form>
 		</div>
