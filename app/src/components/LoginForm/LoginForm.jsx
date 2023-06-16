@@ -1,13 +1,14 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { Button } from 'react-bootstrap';
 import './LoginForm.css';
 
 
-const forgotPasswordHandler = (event) => {}
+
 
 function LoginForm(props) {
+
 
 	const [inputUsername, setInputUsername] = useState('');
 
@@ -15,17 +16,43 @@ function LoginForm(props) {
 
 	const [isButtonFocus, setIsButtonFocus ] = useState(false) ;
 
+	// Defining form input change handlers
 	const onInputUsernameChange = (event) => {
-		setInputUsername(event.target.value);
-		event.target.value ? setIsButtonFocus(true) : setIsButtonFocus(false);
-
+	setInputUsername(event.target.value);
 	};
 
 	const onInputPasswordChange = (event) => {
-		setInputPassword(event.target.value);
-		event.target.value ? setIsButtonFocus(true) : setIsButtonFocus(false);
+	setInputPassword(event.target.value);
 	};
 
+	// Defining hook for form input change handlers
+
+	const onInputChangeHook = () => {
+	if (inputUsername !== '' || inputPassword !== '') {
+	  setIsButtonFocus(true);
+	} else {
+	  setIsButtonFocus(false);
+	}
+	}
+
+	useEffect(
+		onInputChangeHook, 
+		[inputUsername, inputPassword]
+	)
+
+
+
+	const handleMouseHover = (event) => {
+	if (inputUsername || inputPassword) {
+	  return null; 
+	}
+	if(event.type === 'mouseenter') {setIsButtonFocus(true)}
+	if(event.type === 'mouseleave') {setIsButtonFocus(false)}
+
+	}
+
+
+	const forgotPasswordHandler = (event) => {}
 
 
 	return (
@@ -36,9 +63,9 @@ function LoginForm(props) {
 				<h1>Welcome</h1>
 				<h2>Please Login</h2>
 				</header>
-					<div className="input-label mt-4">
+					<label className="input-label mt-4">
 						{(inputUsername || inputPassword ) && <p>Email *</p>}
-					</div>
+					</label>
 					<InputGroup className="mb-5">
 						<Form.Control
 						className="loginform"
@@ -52,9 +79,9 @@ function LoginForm(props) {
 						
 					</InputGroup>
 
-					<div className="input-label">
+					<label className="input-label">
 						{(inputUsername || inputPassword ) && <p>Password *</p>}
-					</div>
+					</label>
 					
 					<InputGroup className="mb-3">
 						<Form.Control
@@ -73,6 +100,8 @@ function LoginForm(props) {
 					<Button 
 						className="loginform mt-4" 
 						type="submit"
+						onMouseEnter={handleMouseHover} 
+						onMouseLeave={handleMouseHover} 
 						style={{ opacity: isButtonFocus ? '1.0' : '0.5' }}>
 						Login
 					</Button>
