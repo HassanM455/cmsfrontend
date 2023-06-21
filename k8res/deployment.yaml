@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cmsfrontend-deployment
+  namespace: frontend
+  labels:
+    app: cmsfrontend
+spec:
+  selector:
+    matchLabels:
+      app: cmsfrontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cmsfrontend 
+    spec:
+      containers:
+        - name: cmsfrontend
+          image: docker.io/library/cmsfe:v0.0.1
+          ports:
+            - containerPort: 3001
+              protocol: TCP
+          env:
+            - name: PORT
+              value: "3001"
+          command: ["npm"]
+          args: ["start"]
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: cmsfrontend-service
+  namespace: frontend
+  labels:
+    app: cmsfrontend
+spec:
+  selector:
+    app: cmsfrontend
+  ports:
+    - protocol: TCP
+      port: 3001
+      targetPort: 3001
+  type: ClusterIP
+

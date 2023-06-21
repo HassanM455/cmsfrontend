@@ -1,0 +1,77 @@
+
+.loginForm {
+    padding: 2em;
+    margin-top: -20vh;
+    width: 80vw;
+    min-width: 320px;
+
+    .form-header {
+        text-align: center;
+        display: grid;
+        gap: 2em;
+       h1 {
+        color: var(--primary-600);
+        font-weight: 700;
+        font-size: 3.2rem;
+       }
+       h2 {
+        font-size: 1.6rem;
+        font-weight: 400;
+       }
+    }
+
+    .input-label {
+       p {
+        font-size: 1.2rem;
+        margin-bottom: .325em;
+       }
+    }
+    .form-control {
+        border-radius: .575em;
+        padding: .475em;
+        font-size: 1.6rem;
+        transition: border 0.4s ease;
+        &:focus {
+            border: 1px solid var(--primary-600);
+            box-shadow: none;
+        }
+    }
+    
+   
+    
+    .btn {  
+        padding: .475em;
+        border-radius: .575em;
+        font-size: 1.6rem;
+        &.btn-primary {
+            background: var(--primary-600);
+            &:hover {
+                background: var(--primary-500);
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-flow: column;
+    
+        .forgot-password {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+// mobile queries
+
+@media screen and (min-width: 920px){
+    .loginForm {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .loginForm {
+        width: 100%;
+        padding: 10em;
+    }
+}
